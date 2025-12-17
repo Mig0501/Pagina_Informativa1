@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "Desarrollo de Software a Medida",
+    "description": "Soluciones ERP, CRM y sistemas de gestión desarrollados específicamente para tus procesos de negocio.",
+    "icon": "💻",
+    "priceTier": "Personalizado",
+    "category": "Desarrollo"
+  },
+  {
+    "id": 2,
+    "title": "Ciberseguridad Empresarial",
+    "description": "Protección de infraestructuras críticas, pentesting, cumplimiento GDPR/LOPD y formación en concienciación.",
+    "icon": "🛡️",
+    "priceTier": "Desde $2,500/mes",
+    "category": "Seguridad"
+  },
+  {
+    "id": 3,
+    "title": "Migración a la Nube (AWS/Azure)",
+    "description": "Modernización de infraestructura, optimización de costes y arquitectura de sistemas escalables.",
+    "icon": "☁️",
+    "priceTier": "Consultar",
+    "category": "Cloud"
+  },
+  {
+    "id": 4,
+    "title": "Soporte IT & Helpdesk 24/7",
+    "description": "Mesa de ayuda multicanl, resolución remota de incidencias y mantenimiento proactivo.",
+    "icon": "🛠️",
+    "priceTier": "Desde $800/mes",
+    "category": "Soporte"
+  },
+  {
+    "id": 5,
+    "title": "Venta de Licencias & Hardware",
+    "description": "Distribuidor autorizado de Microsoft, Adobe, Dell, HP. Asesoramiento técnico-comercial.",
+    "icon": "📦",
+    "priceTier": "Cotización según volumen",
+    "category": "Ventas"
+  }
+]

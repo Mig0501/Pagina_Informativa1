@@ -1,0 +1,173 @@
+.card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Encabezado con icono y categoría */
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.icon {
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.categoryBadge {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Título */
+.title {
+  color: var(--primary-color);
+  margin: 0 0 1rem 0;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  min-height: 3.5rem;
+}
+
+/* Descripción */
+.descriptionContainer {
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+
+.readMoreBtn {
+  background: none;
+  border: none;
+  color: var(--secondary-color);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.readMoreBtn:hover {
+  color: var(--primary-color);
+}
+
+/* Pie de tarjeta - Precio y acciones */
+.cardFooter {
+  margin-top: auto;
+}
+
+.price {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed var(--border-color);
+}
+
+.priceLabel {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  opacity: 0.7;
+  margin-bottom: 0.25rem;
+}
+
+.priceValue {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  display: block;
+}
+
+/* Acciones y contador */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.counterIcon {
+  font-size: 1.2rem;
+}
+
+.counterText {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.quoteButton {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  white-space: nowrap;
+}
+
+.quoteButton:hover {
+  background-color: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+.quoteButton:active {
+  transform: scale(0.95);
+}
+
+/* Estilos específicos por categoría */
+.desarrollo {
+  border-top: 4px solid #0066cc;
+}
+
+.seguridad {
+  border-top: 4px solid #00cc88;
+}
+
+.cloud {
+  border-top: 4px solid #00a8ff;
+}
+
+.soporte {
+  border-top: 4px solid #ffaa00;
+}
+
+.ventas {
+  border-top: 4px solid #cc00ff;
+}
