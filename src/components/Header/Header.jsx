@@ -10,10 +10,10 @@ const Header = ({ isDarkMode, onToggleTheme, totalQuotes }) => {
       
       <nav className={styles.nav}>
         <ul>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#proyectos">Proyectos</a></li>
-          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#inicio">inicio</a></li>
+          <li><a href="#servicios">servicios</a></li>
+          <li><a href="#proyectos">proyectos</a></li>
+          <li><a href="#contacto">contacto</a></li>
         </ul>
       </nav>
       
