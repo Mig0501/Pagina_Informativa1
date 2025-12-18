@@ -1,6 +1,8 @@
 import Header from './components/Header/Header';
 import ServiceCard from './components/ServiceCard/ServiceCard';
 import Hero from './components/Hero/Hero';
+import Stats from './components/Stats/Stats';
+import Footer from './components/Footer/Footer';
 import './App.css';
 import { useEffect, useState } from "react";
 import FeatureCard from "./components/FeatureCard";
@@ -20,14 +22,14 @@ function App() {
     const saved = localStorage.getItem('nexustech-theme');
     return saved ? JSON.parse(saved) : false;
   });
-  
+
   // Estado para servicios cargados desde JSON
   const [services, setServices] = useState([]);
-  
+
   // Estado para cargando/error
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  
+
   // Estado para el total de cotizaciones
   const [totalQuotes, setTotalQuotes] = useState(0);
 
@@ -36,14 +38,14 @@ function App() {
     const loadServices = async () => {
       try {
         setLoading(true);
-        
+
         // Simular carga asíncrona (opcional, puedes quitar el setTimeout)
         await new Promise(resolve => setTimeout(resolve, 500));
-        
+
         // Importar directamente el JSON
         const servicesData = await import('./data/services.json');
         setServices(servicesData.default);
-        
+
         setError(null);
       } catch (err) {
         setError('Error al cargar los servicios');
@@ -71,12 +73,12 @@ function App() {
 
   return (
     <div className={`App ${isDarkMode ? 'dark-theme' : 'light-theme'}`}>
-      <Header 
+      <Header
         isDarkMode={isDarkMode}
         onToggleTheme={toggleTheme}
         totalQuotes={totalQuotes}
       />
-      
+
       <main className="main-content">
         {/* Hero Section */}
         <Hero />
@@ -153,7 +155,13 @@ function App() {
             <p>🔧 Todos los datos se cargan dinámicamente desde <code>src/data/services.json</code> usando <strong>useEffect</strong>.</p>
           </div>
         </section>
+
+        {/* Sección de Estadísticas */}
+        <Stats />
       </main>
+
+      {/* Footer*/}
+      <Footer />
     </div>
   
   );
