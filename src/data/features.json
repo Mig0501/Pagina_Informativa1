@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Rápido",
+    "description": "La aplicación carga rápidamente gracias a Vite."
+    
+  },
+  {
+    "id": 2,
+    "title": "Moderno",
+    "description": "Usa React con componentes reutilizables."
+  },
+  {
+    "id": 3,
+    "title": "Interactivo",
+    "description": "Incluye estados y efectos con hooks."
+  }
+]

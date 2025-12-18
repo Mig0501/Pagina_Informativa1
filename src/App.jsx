@@ -1,10 +1,20 @@
-import React, { useState, useEffect } from 'react';
 import Header from './components/Header/Header';
 import ServiceCard from './components/ServiceCard/ServiceCard';
 import Hero from './components/Hero/Hero';
 import './App.css';
+import { useEffect, useState } from "react";
+import FeatureCard from "./components/FeatureCard";
+
 
 function App() {
+  //Uso de UseEffect
+  const [features, setFeatures] = useState([]);
+
+  useEffect(() => {
+    fetch("/src/data/features.json")
+      .then((response) => response.json())
+      .then((data) => setFeatures(data));
+  }, []);
   // Estado para el tema
   const [isDarkMode, setIsDarkMode] = useState(() => {
     const saved = localStorage.getItem('nexustech-theme');
@@ -71,6 +81,21 @@ function App() {
         {/* Hero Section */}
         <Hero />
 
+        {/* Sección de Características (Features) */}
+        <section className="features-section">
+          <h2>Características de la Plataforma</h2>
+
+          <div className="features-grid">
+            {features.map((feature) => (
+              <FeatureCard
+                key={feature.id}
+                title={feature.title}
+                description={feature.description}
+              />
+            ))}
+          </div>
+        </section>
+
         {/* Sección de Servicios */}
         <section className="services-section" id="servicios">
           <div className="section-header">
@@ -130,7 +155,9 @@ function App() {
         </section>
       </main>
     </div>
+  
   );
+  
 }
 
 export default App;
