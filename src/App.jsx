@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header/Header';
 import ServiceCard from './components/ServiceCard/ServiceCard';
+import Hero from './components/Hero/Hero';
 import './App.css';
 
 function App() {
@@ -68,17 +69,7 @@ function App() {
       
       <main className="main-content">
         {/* Hero Section */}
-        <section className="hero-section">
-          <div className="hero-content">
-            <h1>Transformamos Negocios con Soluciones Digitales</h1>
-            <p className="hero-subtitle">
-              Especialistas en servicios IT, ciberseguridad y venta de soluciones tecnológicas
-            </p>
-            <button className="hero-button">
-              🚀 Solicitar Consultoría Gratuita
-            </button>
-          </div>
-        </section>
+        <Hero />
 
         {/* Sección de Servicios */}
         <section className="services-section" id="servicios">
