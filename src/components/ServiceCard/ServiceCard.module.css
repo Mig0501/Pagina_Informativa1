@@ -1,10 +1,10 @@
 .card {
-  background-color: var(--card-bg);
+  background-color: var(--bg-card);
   border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-sm);
   border: 1px solid var(--border-color);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -12,7 +12,8 @@
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-color);
 }
 
 /* Encabezado con icono y categoría */
@@ -37,19 +38,19 @@
   color: var(--primary-color);
   padding: 0.25rem 0.75rem;
   border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 600;
+  font-size: 0.75rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 /* Título */
 .title {
-  color: var(--primary-color);
+  color: var(--text-primary);
   margin: 0 0 1rem 0;
   font-size: 1.25rem;
   line-height: 1.4;
-  min-height: 3.5rem;
+  font-weight: 700;
 }
 
 /* Descripción */
@@ -59,10 +60,10 @@
 }
 
 .description {
-  color: var(--text-color);
+  color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 0.5rem;
-  opacity: 0.9;
+  font-size: 0.95rem;
 }
 
 .readMoreBtn {
@@ -73,12 +74,15 @@
   font-size: 0.9rem;
   font-weight: 600;
   padding: 0;
-  text-decoration: underline;
+  text-decoration: none;
   transition: color 0.3s;
+  display: inline-flex;
+  align-items: center;
 }
 
 .readMoreBtn:hover {
   color: var(--primary-color);
+  text-decoration: underline;
 }
 
 /* Pie de tarjeta - Precio y acciones */
@@ -94,16 +98,18 @@
 
 .priceLabel {
   display: block;
-  font-size: 0.9rem;
-  color: var(--text-color);
-  opacity: 0.7;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
   margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .priceValue {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: var(--primary-color);
   display: block;
+  font-weight: 700;
 }
 
 /* Acciones y contador */
@@ -111,6 +117,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 0.5rem;
 }
 
 .counter {
@@ -120,38 +127,40 @@
 }
 
 .counterIcon {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
 }
 
 .counterText {
-  font-size: 0.9rem;
-  color: var(--text-color);
-  opacity: 0.8;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
 }
 
 .quoteButton {
-  background-color: var(--primary-color);
-  color: white;
-  border: none;
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
-  padding: 0.75rem 1.5rem;
+  padding: 0.6rem 1rem;
   font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+  transition: all 0.2s;
   white-space: nowrap;
 }
 
 .quoteButton:hover {
-  background-color: var(--secondary-color);
-  transform: scale(1.05);
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border-color: var(--primary-color);
+  transform: translateY(-1px);
 }
 
 .quoteButton:active {
-  transform: scale(0.95);
+  transform: translateY(0);
 }
 
-/* Estilos específicos por categoría */
+/* Estilos específicos por categoría (Bordes superiores opcionales) */
 .desarrollo {
   border-top: 4px solid #0066cc;
 }
