@@ -4,8 +4,8 @@ import Hero from './components/Hero/Hero';
 import Stats from './components/Stats/Stats';
 import Footer from './components/Footer/Footer';
 import './App.css';
-import { useEffect, useState } from "react";
-import FeatureCard from "./components/FeatureCard";
+import { useEffect, useState } from 'react';
+import FeatureCard from './components/FeatureCard';
 
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
   const [features, setFeatures] = useState([]);
 
   useEffect(() => {
-    fetch("/src/data/features.json")
+    fetch('/src/data/features.json')
       .then((response) => response.json())
       .then((data) => setFeatures(data));
   }, []);
